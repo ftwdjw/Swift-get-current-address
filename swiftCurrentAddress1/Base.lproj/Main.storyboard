@@ -21,9 +21,17 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i0q-zZ-oIZ"/>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ua6-pK-tea">
                                 <items>
-                                    <barButtonItem systemItem="add" id="a3Q-f7-wSv"/>
+                                    <barButtonItem systemItem="add" id="a3Q-f7-wSv">
+                                        <connections>
+                                            <action selector="getAddress:" destination="BYZ-38-t0r" id="bWr-1f-6yK"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="IvH-M8-xPE"/>
-                                    <barButtonItem systemItem="stop" id="qiX-EF-A8k"/>
+                                    <barButtonItem systemItem="stop" id="qiX-EF-A8k">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="EAv-18-tMX"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -39,6 +47,9 @@
                             <constraint firstItem="i0q-zZ-oIZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uMg-D8-Qal"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="i0q-zZ-oIZ" id="Ywa-q8-rYO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
