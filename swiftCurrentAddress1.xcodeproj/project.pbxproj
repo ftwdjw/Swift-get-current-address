@@ -26,6 +26,7 @@
 		1B86AAC91DA5C3A300513766 /* address.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86AAC81DA5C3A300513766 /* address.png */; };
 		1B86AACB1DA5D0D300513766 /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1B86AACA1DA5D0D300513766 /* ReadMe.rtf */; };
 		1B86AACD1DA5D15A00513766 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B86AACC1DA5D15A00513766 /* ViewController.swift */; };
+		1B86AAD01DA6B21A00513766 /* MapViewController.m.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B86AACF1DA6B21A00513766 /* MapViewController.m.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +50,8 @@
 		1B86AAC61DA5C39300513766 /* address 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "address 180.png"; sourceTree = "<group>"; };
 		1B86AAC81DA5C3A300513766 /* address.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address.png; sourceTree = "<group>"; };
 		1B86AACA1DA5D0D300513766 /* ReadMe.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
-		1B86AACC1DA5D15A00513766 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B86AACC1DA5D15A00513766 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		1B86AACF1DA6B21A00513766 /* MapViewController.m.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MapViewController.m.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,18 +70,8 @@
 		1B86AA901DA5C1F000513766 = {
 			isa = PBXGroup;
 			children = (
-				1B86AACC1DA5D15A00513766 /* ViewController.swift */,
+				1B86AACE1DA6B1F900513766 /* reference */,
 				1B86AAB31DA5C31200513766 /* icons */,
-				1B86AAB61DA5C35400513766 /* address 40.png */,
-				1B86AAC01DA5C38100513766 /* address 87.png */,
-				1B86AAC41DA5C38E00513766 /* address 120.png */,
-				1B86AAB81DA5C35D00513766 /* address 57.png */,
-				1B86AABA1DA5C36900513766 /* address 58.png */,
-				1B86AAC81DA5C3A300513766 /* address.png */,
-				1B86AAC61DA5C39300513766 /* address 180.png */,
-				1B86AABE1DA5C37700513766 /* address 80.png */,
-				1B86AAC21DA5C38700513766 /* address 114.png */,
-				1B86AABC1DA5C36E00513766 /* address 60.png */,
 				1B86AA9B1DA5C1F400513766 /* swiftCurrentAddress1 */,
 				1B86AA9A1DA5C1F400513766 /* Products */,
 				1B86AAAE1DA5C2BF00513766 /* Frameworks */,
@@ -98,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				1B86AA9C1DA5C1F400513766 /* AppDelegate.swift */,
+				1B86AACC1DA5D15A00513766 /* ViewController.swift */,
 				1B86AAA01DA5C1F400513766 /* Main.storyboard */,
 				1B86AAA31DA5C1F400513766 /* Assets.xcassets */,
 				1B86AAA51DA5C1F400513766 /* LaunchScreen.storyboard */,
@@ -119,9 +112,27 @@
 		1B86AAB31DA5C31200513766 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				1B86AAB61DA5C35400513766 /* address 40.png */,
+				1B86AAC01DA5C38100513766 /* address 87.png */,
+				1B86AAC41DA5C38E00513766 /* address 120.png */,
+				1B86AAB81DA5C35D00513766 /* address 57.png */,
+				1B86AAC81DA5C3A300513766 /* address.png */,
+				1B86AABA1DA5C36900513766 /* address 58.png */,
+				1B86AABE1DA5C37700513766 /* address 80.png */,
+				1B86AAC21DA5C38700513766 /* address 114.png */,
+				1B86AABC1DA5C36E00513766 /* address 60.png */,
+				1B86AAC61DA5C39300513766 /* address 180.png */,
 				1B86AAB41DA5C34100513766 /* address 29.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		1B86AACE1DA6B1F900513766 /* reference */ = {
+			isa = PBXGroup;
+			children = (
+				1B86AACF1DA6B21A00513766 /* MapViewController.m.pdf */,
+			);
+			name = reference;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				1B86AAB91DA5C35D00513766 /* address 57.png in Resources */,
 				1B86AAA71DA5C1F400513766 /* LaunchScreen.storyboard in Resources */,
 				1B86AAA41DA5C1F400513766 /* Assets.xcassets in Resources */,
+				1B86AAD01DA6B21A00513766 /* MapViewController.m.pdf in Resources */,
 				1B86AAC71DA5C39300513766 /* address 180.png in Resources */,
 				1B86AABF1DA5C37700513766 /* address 80.png in Resources */,
 				1B86AAC51DA5C38E00513766 /* address 120.png in Resources */,
