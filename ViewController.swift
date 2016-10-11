@@ -96,13 +96,16 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         
             print("placemarks count=\((placemarks?.count)!)")
         //do stuff in here
-            if (placemarks?.count)! > 0 {//start if
+            if (placemarks?.count)! > 0 && placemarks != nil{//start if
                 
                 count += 1
                 
                  let pm = placemarks![0]
                 
                 //get placemark info
+                
+                //fatal error: unexpectedly found nil while unwrapping an Optional value
+
                 let title1=[ (pm.subThoroughfare!) +  " " + (pm.thoroughfare!)]
                 var subTitle1=[ (pm.locality!) +   " , " + (pm.administrativeArea!) + " " ]
                 subTitle1.append(pm.postalCode!)
