@@ -93,20 +93,40 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
                 print("Reverse geocoder failed with error" + (error?.localizedDescription)!)
                 return
             }//end error
+            
         
             print("placemarks count=\((placemarks?.count)!)")
         //do stuff in here
-            if (placemarks?.count)! > 0 && placemarks != nil{//start if
+            
+             let pm = placemarks![0]
+            
+            print("subThoroughfare=\(pm.subThoroughfare)")
+            
+             print("thoroughfare=\(pm.thoroughfare)")
+            
+            print("locality=\(pm.locality)")
+            print("administrativeArea=\(pm.administrativeArea)")
+              print("postalCode=\(pm.postalCode)")
+            
+            if (placemarks?.count)! > 0 {//start if
                 
                 count += 1
                 
-                 let pm = placemarks![0]
+                
                 
                 //get placemark info
                 
                 //fatal error: unexpectedly found nil while unwrapping an Optional value
+                var title1 = [""]
+                
+                if pm.subThoroughfare == nil{
+                   title1 = [(pm.thoroughfare!)]
+                }
+                else{
+                  title1=[ (pm.subThoroughfare!) +  " " + (pm.thoroughfare!)]
+                }
 
-                let title1=[ (pm.subThoroughfare!) +  " " + (pm.thoroughfare!)]
+                //let title1=[ (pm.subThoroughfare!) +  " " + (pm.thoroughfare!)]
                 var subTitle1=[ (pm.locality!) +   " , " + (pm.administrativeArea!) + " " ]
                 subTitle1.append(pm.postalCode!)
                 // add annotation
@@ -118,7 +138,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
                 self.mapView.addAnnotation(self.annotation)
                 //select and show annotation
                 let yourAnnotationAtIndex = 0
-                self.mapView.selectAnnotation(self.mapView.annotations[yourAnnotationAtIndex], animated: true)
+                self.mapView.selectAnnotation(self.mapView.annotations[0], animated: true)
                 
                 if count==1{
                     self.locationManager.stopUpdatingLocation()
