@@ -68,6 +68,8 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     func locationManager(_ manager: CLLocationManager, didUpdateLocations
         locations: [CLLocation])
     {//start location
+        
+        
         var count=0
         
         let location = locations.last
@@ -137,14 +139,26 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
                 self.annotation.coordinate = (self.locationManager.location?.coordinate)!
                 self.mapView.addAnnotation(self.annotation)
                 //select and show annotation
-                let yourAnnotationAtIndex = 0
+                //let yourAnnotationAtIndex = 0
+                
+                print("annotations=\([self.mapView.annotations])")
+                
+                let number = self.mapView.annotations.count
+                
+                                if number == 2{
+                    self.mapView.selectAnnotation(self.mapView.annotations[1], animated: true)
+                      }
+                                else{
+            
                 self.mapView.selectAnnotation(self.mapView.annotations[0], animated: true)
+                }
                 
                 if count==1{
                     self.locationManager.stopUpdatingLocation()
                 }
                 
                 print("count=\(count)")
+                //self.mapView.selectAnnotation(self.mapView.annotations[0], animated: true)
                 
             }//end if
         
